@@ -2,8 +2,6 @@
 
 ## 📌 Overview
 
-## 📌 Overview
-
 This repository contains a **dbt (data build tool) project connected to Snowflake**.  
 It is based on the concepts taught in the LinkedIn Learning course:  
 [Data Engineering with dbt](https://www.linkedin.com/learning/data-engineering-with-dbt).
@@ -16,6 +14,5 @@ This project is primarily for **learning the fundamentals of dbt**, with some pe
 - It also includes implementing data quality tests and enabling scalable analytics workflows.
 
 This repo is intended as a hands-on learning resource and demonstration of dbt best practices adapted for Snowflake.
-
 
 
