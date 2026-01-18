@@ -66,7 +66,6 @@ my_snowflake_profile:
 
 ```
 
-## 🔄 env variable configuring 
 ## 🔄 Environment Variable Configuration
 
 To securely manage sensitive information like your Snowflake password, you can use environment variables.
