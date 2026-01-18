@@ -64,6 +64,8 @@ my_snowflake_profile:
       warehouse: TRANSFORMING_WH
   target: dev
 
+```yaml 
+
 
 ## 👤 Author
 
