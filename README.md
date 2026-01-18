@@ -66,6 +66,42 @@ my_snowflake_profile:
 
 ```yaml 
 
+## 🔄 env variable configuring 
+## 🔄 Environment Variable Configuration
+
+To securely manage sensitive information like your Snowflake password, you can use environment variables.
+
+### Steps to set up environment variables:
+
+1. Create a `.env` file in your project root and add your variables, for example:
+
+    ```
+    SNOWFLAKE_ACCOUNT=your_account
+    SNOWFLAKE_USER=your_username
+    SNOWFLAKE_PASSWORD=your_password
+    SNOWFLAKE_ROLE=your_role
+    SNOWFLAKE_DATABASE=your_database
+    SNOWFLAKE_WAREHOUSE=your_warehouse
+    SNOWFLAKE_SCHEMA=your_schema
+    ```
+
+2. Load these variables into your shell session with:
+
+    ```bash
+    set -a          # Export all variables
+    source .env     # Load variables from .env
+    set +a          # Stop exporting automatically
+    ```
+
+3. Verify that your variables are loaded by running:
+
+    ```bash
+    echo $SNOWFLAKE_PASSWORD
+    ```
+
+
+> **Note:** Keep your `.env` file secure and add it to `.gitignore` to avoid committing secrets to version control.
+
 
 ## 👤 Author
 
