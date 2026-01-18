@@ -16,6 +16,18 @@ This project is primarily for **learning the fundamentals of dbt**, with some pe
 This repo is intended as a hands-on learning resource and demonstration of dbt best practices adapted for Snowflake.
 
 
+## 🧠 What This Project Includes
+
+- Source configurations  
+- Staging, intermediate and mart models  
+- Data quality tests  
+- Macros and Jinja templating  
+- Auto-generated dbt documentation  
+- Lineage graphs  
+
+---
+
+
 ## 📌 Setup Instructions
 
 - You may need to manually load the sample dataset used in this course into Snowflake tables.  
@@ -24,5 +36,38 @@ This repo is intended as a hands-on learning resource and demonstration of dbt b
 
 
 
+### Sample `profiles.yml` configuration
+
+```yaml
+my_snowflake_profile:
+  outputs:
+    dev:
+      account: ufb66789
+      database: DEV_SLN_DB
+      password: '{{ env_var(''SNOWFLAKE_PASSWORD'') }}'
+      role: dbt_sf_dev_role
+      schema: NYC_PARKING_VIOLATIONS
+      threads: 2
+      type: snowflake
+      user: dbt_user
+      warehouse: COMPUTE_WH
+
+    prod:
+      account: ufb66789
+      database: PROD_SLN_DB
+      password: '{{ env_var(''SNOWFLAKE_PASSWORD'') }}'
+      role: dbt_sf_prod_role
+      schema: NYC_PARKING_VIOLATIONS
+      threads: 4
+      type: snowflake
+      user: dbt_user
+      warehouse: TRANSFORMING_WH
+  target: dev
 
 
+## 👤 Author
+
+Lahiru  
+https://github.com/lahiru-98
+
+---

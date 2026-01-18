@@ -1,7 +1,7 @@
 my_snowflake_profile:
   outputs:
     dev:
-      account: ufb63575
+      account: ufb66789
       database: DEV_SLN_DB
       password: '{{ env_var(''SNOWFLAKE_PASSWORD'') }}'
       role: dbt_sf_dev_role
@@ -10,9 +10,9 @@ my_snowflake_profile:
       type: snowflake
       user: dbt_user
       warehouse: COMPUTE_WH
-      
+
     prod:
-      account: ufb63575
+      account: ufb66789
       database: PROD_SLN_DB
       password: '{{ env_var(''SNOWFLAKE_PASSWORD'') }}'
       role: dbt_sf_prod_role
