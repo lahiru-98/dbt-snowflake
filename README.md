@@ -64,7 +64,7 @@ my_snowflake_profile:
       warehouse: TRANSFORMING_WH
   target: dev
 
-```yaml 
+\```yaml 
 
 ## 🔄 env variable configuring 
 ## 🔄 Environment Variable Configuration
