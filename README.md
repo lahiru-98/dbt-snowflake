@@ -16,3 +16,13 @@ This project is primarily for **learning the fundamentals of dbt**, with some pe
 This repo is intended as a hands-on learning resource and demonstration of dbt best practices adapted for Snowflake.
 
 
+## 📌 Setup Instructions
+
+- You may need to manually load the sample dataset used in this course into Snowflake tables.  
+- The SQL scripts for creating databases and granting access permissions are provided in the `snowflake_setup.sql` file.  
+- Follow the instructions in the `snowflake_setup.sql` file to set up your Snowflake environment properly before running the dbt models.
+
+
+
+
+
