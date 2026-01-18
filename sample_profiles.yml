@@ -1,0 +1,24 @@
+my_snowflake_profile:
+  outputs:
+    dev:
+      account: ufb63575
+      database: DEV_SLN_DB
+      password: '{{ env_var(''SNOWFLAKE_PASSWORD'') }}'
+      role: dbt_sf_dev_role
+      schema: NYC_PARKING_VIOLATIONS
+      threads: 2
+      type: snowflake
+      user: dbt_user
+      warehouse: COMPUTE_WH
+      
+    prod:
+      account: ufb63575
+      database: PROD_SLN_DB
+      password: '{{ env_var(''SNOWFLAKE_PASSWORD'') }}'
+      role: dbt_sf_prod_role
+      schema: NYC_PARKING_VIOLATIONS
+      threads: 4
+      type: snowflake
+      user: dbt_user
+      warehouse: TRANSFORMING_WH
+  target: dev
