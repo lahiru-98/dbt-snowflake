@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: nyc_parking
+    database: RAW_SLN_DB
+    schema: NYC_PARKING_VIOLATIONS
+    tables:
+      - name: dof_parking_violation_codes
+        description: "Codes for parking violations from DOF"
+      - name: parking_violations_issued_fiscal_year_2023_sample
+        description: "Sample data of parking violations issued in FY2023"
