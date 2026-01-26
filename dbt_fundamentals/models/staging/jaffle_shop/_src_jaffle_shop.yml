@@ -1,0 +1,8 @@
+# we use _ for the yaml file to make sure it appears at the top of the directory
+sources:
+  - name: jaffle_shop
+    database: raw
+    schema: jaffle_shop  #database and schema names mutch exactly match (case sensitive)
+    tables:
+      - name: customers
+      - name: orders
