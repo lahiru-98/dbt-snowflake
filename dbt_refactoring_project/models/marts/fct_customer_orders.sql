@@ -20,20 +20,7 @@ p as (
     where STATUS <> 'fail'
     group by 1   
 ),
-
-x as 
-(
-    select
-    p.order_id,
-    sum(t2.total_amount_paid) as clv_bad
-    from paid_orders p
-    left join paid_orders t2 on p.customer_id = t2.customer_id and p.order_id >= t2.order_id
-    group by 1
-    order by p.order_id
-)
-
-
-WITH paid_orders as 
+paid_orders as 
 (
     select Orders.ID as order_id,
         Orders.USER_ID    as customer_id,
@@ -51,6 +38,17 @@ WITH paid_orders as
     on orders.USER_ID = C.ID
  ),
 
+ x as 
+(
+    select
+    p.order_id,
+    sum(t2.total_amount_paid) as clv_bad
+    from paid_orders p
+    left join paid_orders t2 on p.customer_id = t2.customer_id and p.order_id >= t2.order_id
+    group by 1
+    order by p.order_id
+),
+
 customer_orders as 
 (
     select C.ID as customer_id
@@ -62,10 +60,10 @@ customer_orders as
     left join raw_orders as Orders
     on orders.USER_ID = C.ID 
     group by 1
-)
-, 
+),
+
 final as (
-    
+
     select
 
     p.*,
